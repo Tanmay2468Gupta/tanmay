@@ -1,10 +1,8 @@
 
 
 public class xyz {
-    static class Animal {
-        void sound() {
-            System.out.println("Animal Can eat !! ");
-        }
+    abstract static class Animal {
+        abstract void sound();
     }
 
     static class Dog extends Animal {
@@ -15,14 +13,14 @@ public class xyz {
     }
 
     static class Cat extends Animal {
-        @Override
+        @Override  
         void sound() {
             System.out.println("Cat eat");
         }
     }
     public static void main(String[] args) {
         Animal a;  // reference of parent
-        a = new Animal();
+        a = new Dog();
         a.sound();   // Dog barks (runtime decision)
 
         a = new Cat();
