@@ -8,7 +8,7 @@ public class xyz {
     }
 
     static class Dog extends Animal {
-        @Override
+        @Override  // used for overwrite the class parent class to sub class
         void sound() {
             System.out.println("Dog eat");
         }
