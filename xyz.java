@@ -1,4 +1,4 @@
-
+//override and extensds 
 
 public class xyz {
     abstract static class Animal {
