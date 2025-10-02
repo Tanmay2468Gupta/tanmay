@@ -35,7 +35,20 @@ public class sort {
         }
     }
     
-
+    public static void insertionSort(int arr[],int n){
+        for(int i=0;i<=n-1;i++){
+            int j=i;
+            while(j>0 && arr[j-1]>arr[j]){
+                int temp=arr[j];
+                arr[j]=arr[j-1];
+                arr[j-1]=temp;
+                j--;
+            }
+            System.out.print("Answer is After "+(i+1)+" round : -> ");
+            for(int z=0;z<n;z++)System.out.print(arr[z]+" ");
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -45,7 +58,8 @@ public class sort {
             arr[i]=sc.nextInt();
         }
         // selectionSort(arr,n);
-        bubbleSort(arr, n);
+        // bubbleSort(arr, n);
+        insertionSort(arr, n);
         System.out.print("Answer is : -> ");
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
