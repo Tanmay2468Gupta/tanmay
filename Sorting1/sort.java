@@ -84,7 +84,31 @@ public class sort {
         merge(arr,s,mid,e);
     }
     
+    public static int partition(int arr[],int st,int e){
+        int idx=st-1;
+        int pivot=arr[e];
+        for(int i=st;i<e;i++){
+            if(arr[i]<=pivot){
+                idx++;
+                int temp=arr[i];
+                arr[i]=arr[idx];
+                arr[idx]=temp;
+            }
+        }
+        idx++;
+        int temp=arr[idx];
+        arr[idx]=arr[e];
+        arr[e]=temp;
 
+        return idx;
+
+    }
+    public static void qs(int arr[],int st,int e){
+        if(st>=e)return ;
+        int pIndex=partition(arr,st,e);
+        qs(arr,st,pIndex-1);
+        qs(arr,pIndex+1,e);
+    }
     
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -96,7 +120,8 @@ public class sort {
         // selectionSort(arr,n);
         // bubbleSort(arr, n);
         // insertionSort(arr, n);
-        mergeSort(arr, 0, n-1);
+        // mergeSort(arr, 0, n-1);
+        qs(arr, 0, n-1);
         System.out.print("Answer is : -> ");
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
