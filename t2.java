@@ -1,8 +1,9 @@
 public class t2 {
     static class MyThread extends Thread {
     private static String name;
-    MyThread(String name) { this.name = name; }
-
+    MyThread(String name) {
+        this.name = name; 
+    }
     public void run() {
         for(int i=1; i<=3; i++) {
             System.out.println(name + " running: " + i);
