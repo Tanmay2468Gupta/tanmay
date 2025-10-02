@@ -17,6 +17,25 @@ public class sort {
         }
     }
 
+    public static void bubbleSort(int arr[],int n){
+        for(int i=n-1;i>=0;i--){
+            boolean swap=false;
+            for(int j=0;j<=i-1;j++){
+                if(arr[j]>arr[j+1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                    swap=true;
+                }
+            }
+            if(swap==false)break;
+            System.out.print("Answer is After "+(n-i)+" round : -> ");
+            for(int z=0;z<n;z++)System.out.print(arr[z]+" ");
+            System.out.println();
+        }
+    }
+    
+
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -25,8 +44,8 @@ public class sort {
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
-        selectionSort(arr,n);
- 
+        // selectionSort(arr,n);
+        bubbleSort(arr, n);
         System.out.print("Answer is : -> ");
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
