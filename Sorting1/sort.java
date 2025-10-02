@@ -50,6 +50,42 @@ public class sort {
         }
     }
 
+    public static void merge(int arr[],int st,int mid,int e){
+        int i=st;
+        int j=mid+1;
+        ArrayList<Integer>ans=new ArrayList<>();
+        while(i<=mid && j<=e){
+            if(arr[i]<=arr[j]){
+                ans.add(arr[i]);
+                i++;
+            }
+            else{
+                ans.add(arr[j]);
+                j++;
+            }
+        }
+        while(i<=mid){
+            ans.add(arr[i]);
+            i++;
+        }
+        while(j<=e){
+            ans.add(arr[j]);
+            j++;
+        }
+        for(i=0;i<ans.size();i++){
+            arr[i+st]=ans.get(i);
+        }
+    }
+    public static void mergeSort(int arr[],int s,int e){
+        if(s>=e)return ;
+        int mid=s+(e-s)/2;
+        mergeSort(arr, s, mid);
+        mergeSort(arr, mid+1, e);
+        merge(arr,s,mid,e);
+    }
+    
+
+    
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
@@ -59,7 +95,8 @@ public class sort {
         }
         // selectionSort(arr,n);
         // bubbleSort(arr, n);
-        insertionSort(arr, n);
+        // insertionSort(arr, n);
+        mergeSort(arr, 0, n-1);
         System.out.print("Answer is : -> ");
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
