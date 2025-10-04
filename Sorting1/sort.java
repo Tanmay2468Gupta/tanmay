@@ -122,6 +122,7 @@ public class sort {
         // insertionSort(arr, n);
         // mergeSort(arr, 0, n-1);
         qs(arr, 0, n-1);
+        
         System.out.print("Answer is : -> ");
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
