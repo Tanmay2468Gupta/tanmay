@@ -4,7 +4,7 @@ public class Car {
     private int fuel;  // private ensures that fuel can't be accessed directly from outside the class
 
     public Car() {
-        this.fuel = 100;  // Initialize with 100 units of fuel
+        this.fuel = 100;  // Initialize with 100 units of fuel    -> By default
     }
 
     // Getter method for fuel
@@ -34,6 +34,8 @@ public class Car {
         Car myCar = new Car();
         myCar.drive();
         System.out.println("Fuel remaining: " + myCar.getFuel());
+        myCar.setFuel(70);  // This will print "Invalid fuel amount."
+        System.out.println("Hello ");
         myCar.setFuel(120);  // This will print "Invalid fuel amount."
     }
 }
