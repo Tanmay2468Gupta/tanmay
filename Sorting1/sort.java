@@ -119,7 +119,7 @@ public class sort {
         }
 
         // Sorting Done :-> 
-        
+
         // selectionSort(arr,n);
         // bubbleSort(arr, n);
         // insertionSort(arr, n);
@@ -130,5 +130,6 @@ public class sort {
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
         }
+        sc.close();
     }
 }
