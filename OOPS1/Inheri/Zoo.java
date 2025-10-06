@@ -11,7 +11,7 @@ abstract class Animal {
     }
 
     // Abstract method
-    public abstract void makeSound();
+    public abstract void makeSound(); //using abstract class
 
     public void sleep() {
         System.out.println(name + " is sleeping.");
