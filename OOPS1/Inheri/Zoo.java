@@ -18,7 +18,9 @@ abstract class Animal {
     }
 }
 
-// Derived class
+
+
+// Derived class Animal
 class Lion extends Animal {
     public Lion(String name) {
         super(name);
