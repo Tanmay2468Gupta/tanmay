@@ -8,7 +8,7 @@ class B extends A {
     static void show() { System.out.println("Static B"); }
 }
 
-public class Test4 {
+public class Test4 {  // static not overridden 
     public static void main(String[] args) {
         A obj = new B();
         obj.show();
