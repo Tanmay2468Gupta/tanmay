@@ -9,6 +9,8 @@ class TreeNode{
         this.right=null;
     }
 }
+
+
 public class BSTcreate {
     public static TreeNode create(int arr[],int left,int right){
             if(left>right)return null;
