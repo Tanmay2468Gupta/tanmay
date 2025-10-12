@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run Selenium Demo",
+            "request": "launch",
+            "mainClass": "SeleniumDemo.Main",
+            "projectName": "SeleniumDemo",
+            "vmArgs": "-Dwebdriver.chrome.driver=chromedriver.exe",
+            "preLaunchTask": "javac Selenium"
+        }
+    ]
+}
