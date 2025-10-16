@@ -28,7 +28,7 @@ except:
 
 # Wait for search box
 search_box = wait.until(EC.presence_of_element_located((By.ID, "twotabsearchtextbox")))
-search_box.send_keys("laptop")
+search_box.send_keys("mobile")
 search_box.submit()
 
 # Wait for results
@@ -38,7 +38,7 @@ wait.until(EC.presence_of_all_elements_located((By.XPATH, "//div[@data-component
 
 
 # Number of pages to scrape
-num_pages = 5
+num_pages = 10
 all_data = []
 
 for page in range(num_pages):
