@@ -14,7 +14,7 @@ options.add_argument("--start-maximized")
 # options.add_argument("--incognito")  
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-driver.get("https://www.amazon.in/")
+driver.get("https://www.flipkart.in/")  
 
 wait = WebDriverWait(driver, 10)
 
