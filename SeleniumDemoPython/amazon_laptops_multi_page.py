@@ -44,9 +44,7 @@ all_data = []
 for page in range(num_pages):
     print(f"Scraping page {page + 1}...")
     time.sleep(2)  # wait for page to load
-
     products = driver.find_elements(By.XPATH, "//div[@data-component-type='s-search-result']")
-
     for product in products:
         try:
             title = product.find_element(By.TAG_NAME, "h2").text
@@ -60,8 +58,6 @@ for page in range(num_pages):
             price = "Price not available"
         all_data.append([title, price])
         print(f"{title} - {price}")
-
-    # Try to go to the next page
     try:
         next_button = driver.find_element(By.XPATH, "//a[contains(@class,'s-pagination-next')]")
         driver.execute_script("arguments[0].click();", next_button)
