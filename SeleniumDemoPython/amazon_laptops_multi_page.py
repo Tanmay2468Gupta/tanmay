@@ -38,7 +38,7 @@ wait.until(EC.presence_of_all_elements_located((By.XPATH, "//div[@data-component
 
 
 # Number of pages to scrape
-num_pages = 10
+num_pages = 15
 all_data = []
 
 for page in range(num_pages):
