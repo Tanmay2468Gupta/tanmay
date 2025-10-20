@@ -57,8 +57,6 @@ driver.find_element(By.XPATH, "//p[contains(text(),'Delhi, India')]").click()
 # === SELECT DATE ===
 time.sleep(2)
 driver.find_element(By.XPATH, "(//div[@aria-label])[10]").click()
-
-# === SEARCH ===
 wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='Search']"))).click()
 
 print("✅ Searching flights from Kolkata → Delhi...")
