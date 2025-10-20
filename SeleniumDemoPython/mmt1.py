@@ -122,10 +122,8 @@ if flights_data:
     ws = wb.active
     ws.title = "Flight Results"
     ws.append(["Airline", "Departure Time", "Price"])
-
     for row in flights_data:
         ws.append(row)
-
     filename = f"Flights_Kolkata_to_Delhi_{tomorrow.strftime('%d_%m_%Y')}.xlsx"
     wb.save(filename)
     print(f"📁 Data saved successfully in '{filename}'")
