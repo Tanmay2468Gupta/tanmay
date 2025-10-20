@@ -82,7 +82,7 @@ print("✈️ Searching flights from Kolkata to Delhi for tomorrow...")
 
 # --- WAIT FOR URL TO CHANGE ---
 wait.until(EC.url_contains("/flight/search"))
-print("✅ Redirected to search results page.")
+print("✅ Redirected to search results page.")  #search and redirect 
 
 # --- WAIT FOR RESULTS TO LOAD ---
 print("⏳ Waiting for flight results to appear...")
