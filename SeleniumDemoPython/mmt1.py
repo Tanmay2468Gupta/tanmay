@@ -57,7 +57,7 @@ time.sleep(1)
 to_box.send_keys(Keys.ENTER)
 
 # --- SELECT TOMORROW’S DATE ---
-tomorrow = datetime.now() + timedelta(days=1)
+tomorrow = datetime.now() + timedelta(days=1)   # add date+1
 day = tomorrow.day
 month_year = tomorrow.strftime("%B %Y")
 
