@@ -5,7 +5,7 @@ public class t2 {
         this.name = name; 
     }
     public void run() {
-        for(int i=1; i<=3; i++) {
+        for(int i=1; i<=5; i++) {
             System.out.println(name + " running: " + i);
             try { Thread.sleep(500); } catch(Exception e) {}
         }
