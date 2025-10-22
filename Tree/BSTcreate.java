@@ -22,7 +22,7 @@ public class BSTcreate {
         Arrays.sort(arr);
         return create(arr,0,arr.length-1);
     }
-    public static void inorder(TreeNode root) {
+    public static void inorder(TreeNode root) {// inordr
         if (root == null) return;
         inorder(root.left);
         System.out.print(root.val + " ");
