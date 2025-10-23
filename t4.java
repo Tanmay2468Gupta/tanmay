@@ -3,9 +3,7 @@ public class t4 {
         public void run() {
             System.out.println("Currently running thread: " + Thread.currentThread());
         }
-    }
-
-    public static void main(String[] args) {
+    }    public static void main(String[] args) {
         MyThread t1 = new MyThread();
         t1.setName("MyWorkerThread");
         t1.start();
