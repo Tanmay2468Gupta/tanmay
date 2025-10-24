@@ -4,7 +4,6 @@ public class abc {
             System.out.println("Running in: " + Thread.currentThread().getName());
         }
     }
-
     public static void main(String[] args) {
         MyThread t1 = new MyThread();
         MyThread t2 = new MyThread();
