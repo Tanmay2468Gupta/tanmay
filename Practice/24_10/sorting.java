@@ -74,13 +74,36 @@ public class sorting {
         mergeSort(arr, mid + 1, e);
         merge(arr, s, mid, e);
     }
-
+    public static void qs(int arr[],int s,int e){
+        if(s>=e)return;
+        int pIndex=partion(arr,s,e);
+        qs(arr,s,pIndex-1);
+        qs(arr,pIndex+1,e);
+    }
+    public static int partion(int arr[],int s,int e){
+        int idx=s-1;
+        int pivot=arr[e];
+        for(int i=s;i<e;i++){
+            if(arr[i]<=pivot){
+                idx++;
+                int temp=arr[idx];
+                arr[idx]=arr[i];
+                arr[i]=temp;
+            }
+        }
+        idx++;
+        int temp=arr[idx];
+        arr[idx]=arr[e];
+        arr[e]=temp;
+        return idx;
+    }
     public static void main(String[] args) {
         int arr[] = { 13, 46, 24, 52, 20, 9 };
         // selectionsort(arr);
         // bubbleSort(arr);
         // insertionSort(arr);
-        mergeSort(arr, 0, arr.length-1);
+        // mergeSort(arr, 0, arr.length-1);
+        qs(arr, 0, arr.length-1);
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
