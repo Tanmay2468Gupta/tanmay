@@ -99,9 +99,7 @@ public class sort {
         int temp=arr[idx];
         arr[idx]=arr[e];
         arr[e]=temp;
-
         return idx;
-
     }
     public static void qs(int arr[],int st,int e){
         if(st>=e)return ;
