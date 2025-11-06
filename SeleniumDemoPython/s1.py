@@ -32,9 +32,6 @@ try:
         print("Ad popup closed")
     except:
         print("No ad popup found")
-
-    # Wait and click "From" city
-# Wait and click "From" city (ULTIMATE FIX)
     try:
     # 1. Click the 'From' container using JavaScript (most reliable way to open it)
         from_city_container = wait.until(EC.presence_of_element_located((By.ID, "fromCity")))
