@@ -16,7 +16,7 @@ driver = webdriver.Chrome(service=service, options=options)
 wait = WebDriverWait(driver, 20)  # wait max 20 sec for elements
 
 try:
-    driver.get("https://www.easytrip.com/")
+    driver.get("https://www.makemytrip.com/")
     time.sleep(5)
 
     # Try closing popups or ads
