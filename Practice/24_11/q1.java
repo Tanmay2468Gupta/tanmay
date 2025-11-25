@@ -13,8 +13,37 @@ The king tells his minister:
 Tell me the total amount of gold to be added.”
 You, as the Royal Programmer, must help him. */
 
+import java.util.*;
+import java.io.*;
 public class q1 {
-    public static void main(String[] args) {
-        
+    public static void main(String[] subham) throws Exception {
+        // Scanner sc=new Scanner(System.in);
+        // int n=sc.nextInt();
+        // int arr[]=new int [n];
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        System.out.println("Enter the size of family ");
+        int n=Integer.parseInt(br.readLine().trim());
+        System.out.println("Enter the gold coin with family ");
+        long arr[]=new long[n];
+        st=new StringTokenizer(br.readLine());
+        int idx=0;
+        while(st.hasMoreTokens() && idx>n){
+            arr[idx++]=Long.parseLong(st.nextToken());
+        }
+        while(idx<n){
+            st=new StringTokenizer(br.readLine());
+            while(st.hasMoreTokens() && idx<n){
+                arr[idx++]=Long.parseLong(st.nextToken());
+            }
+            long totalAdded=0L;
+            for(int i=1;i<n;i++){
+                if(arr[i]<arr[i-1]){
+                    long need=arr[i-1]-arr[i];
+                    totalAdded+=need;
+                    arr[i]=arr[i-1];
+                }
+            }
+        }
     }
 }
