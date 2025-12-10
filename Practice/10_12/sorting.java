@@ -71,12 +71,36 @@ public class sorting {
         mergeSort(arr,mid+1,e);
         merge(arr,s,mid,e);
     }
+    public static int partion(int arr[],int s,int e){
+        int idx=s-1;
+        int pivot=arr[e];
+        for(int i=s;i<e;i++){
+            if(arr[i]<=pivot){
+                idx++;
+                int temp=arr[i];
+                arr[i]=arr[idx];
+                arr[idx]=temp;
+            }
+        }
+        idx++;
+        int temp=arr[idx];
+        arr[idx]=arr[e];
+        arr[e]=temp;
+        return idx;
+    }
+    public static void quickSort(int arr[],int s,int e){
+        if(s>=e)return;
+        int index=partion(arr,s,e);
+        quickSort(arr, s, index-1);
+        quickSort(arr,index+1,e);
+    }
     public static void main(String[] args) {
         int arr[]={13,46,24,52,20,9};
         // selectionSort(arr);
         // bubbleSort(arr);
         // insertion(arr);
-        mergeSort(arr, 0, 5);
+        // mergeSort(arr, 0, 5);
+        quickSort(arr, 0, 5);
         print(arr);
     }
 }
