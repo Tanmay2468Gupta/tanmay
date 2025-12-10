@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class sorting {
     public static void print(int arr[]){
         int n=arr.length;
@@ -44,11 +46,37 @@ public class sorting {
             }
         }
     }
+    public static void merge(int arr[],int st,int mid,int e){
+        int i=st;
+        int j=mid+1;
+        ArrayList<Integer>ans=new ArrayList<>();
+        while(i<=mid && j<=e){
+            if(arr[i]<arr[j]){
+                ans.add(arr[i++]);
+            }
+            else{
+                ans.add(arr[j++]);
+            }
+        }
+        while(i<=mid)ans.add(arr[i++]);
+        while(j<=e)ans.add(arr[j++]);
+        for(i=0;i<ans.size();i++){
+            arr[i+st]=ans.get(i);
+        }
+    }
+    public static void mergeSort(int arr[],int s,int e){
+        if(s>=e)return;
+        int mid=s+(e-s)/2;
+        mergeSort(arr, s, mid);
+        mergeSort(arr,mid+1,e);
+        merge(arr,s,mid,e);
+    }
     public static void main(String[] args) {
         int arr[]={13,46,24,52,20,9};
         // selectionSort(arr);
         // bubbleSort(arr);
-        insertion(arr);
+        // insertion(arr);
+        mergeSort(arr, 0, 5);
         print(arr);
     }
 }
