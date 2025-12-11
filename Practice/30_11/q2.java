@@ -18,8 +18,8 @@ public class q2 {
         int sum = list.stream()
                 .reduce(0, (a, b) -> a + b);
 
-        System.out.println("Doubled: " + doubled);
-        System.out.println("Evens: " + evens);
-        System.out.println("Sum: " + sum);
+        System.out.println("Doubled : " + doubled);
+        System.out.println("Evens : " + evens);
+        System.out.println("Sum : " + sum);
     }
 }
